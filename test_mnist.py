@@ -18,7 +18,7 @@ def img_show(img):
 img = img.reshape(28, 28)
 img_show(img)
 '''
-img = img.reshape(784)
+img = img.reshape(1, 784)
 
 my_network = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
 
