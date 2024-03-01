@@ -1,7 +1,7 @@
 # coding: utf-8
 import numpy as np
 import matplotlib.pyplot as plt
-from SimpleConvNet import SimpleConvNet
+from cnn import SimpleConvNet
 
 def filter_show(filters, nx=8, margin=3, scale=10):
     """

@@ -1,12 +1,17 @@
 from dataset.mnist import load_mnist
-from cnn import SimpleConvNet
+from deep_cnn import DeepConvNet
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
 
-network = SimpleConvNet(input_dim=(1, 28, 28), conv_param={'filter_num': 30, 'filter_size': 5, 'pad': 0, 'stride': 1},
-                        hidden_size=100, output_size=10, weight_init_std=0.01)
-
+network = DeepConvNet(input_dim=(1, 28, 28),
+                 conv_param_1 = {'filter_num':16, 'filter_size':3, 'pad':1, 'stride':1},
+                 conv_param_2 = {'filter_num':16, 'filter_size':3, 'pad':1, 'stride':1},
+                 conv_param_3 = {'filter_num':32, 'filter_size':3, 'pad':1, 'stride':1},
+                 conv_param_4 = {'filter_num':32, 'filter_size':3, 'pad':2, 'stride':1},
+                 conv_param_5 = {'filter_num':64, 'filter_size':3, 'pad':1, 'stride':1},
+                 conv_param_6 = {'filter_num':64, 'filter_size':3, 'pad':1, 'stride':1},
+                 hidden_size=50, output_size=10)
 
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, flatten=False, one_hot_label=False)
 

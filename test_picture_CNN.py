@@ -1,8 +1,8 @@
 from deal_img import dealimg
-from SimpleConvNet import SimpleConvNet
+from cnn import SimpleConvNet
 import numpy as np
 
-path = 'C:\\Users\\marenkun\\Desktop\\picture1\\0.jpg'
+path = 'C:\\Users\\marenkun\\Desktop\\picture1\\8.jpg'
 img_array = dealimg(path)
 img_array = img_array.reshape(1, 1, 28, 28)
 
