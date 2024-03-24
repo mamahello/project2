@@ -2,7 +2,7 @@ from deal_img import dealimg
 from cnn import SimpleConvNet
 import numpy as np
 
-path = 'C:\\Users\\marenkun\\Desktop\\picture1\\8.jpg'
+path = 'C:\\Users\\marenkun\\Desktop\\picture1\\4.jpg'
 img_array = dealimg(path)
 img_array = img_array.reshape(1, 1, 28, 28)
 
@@ -12,3 +12,4 @@ my_network.load_params(file_name='weights1.pkl')
 prediction = my_network.predict(img_array)
 a = np.argmax(prediction)
 print("这张图片的数字是：", a)
+#print(my_network.params['W2'].shape)
